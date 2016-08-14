@@ -7,7 +7,7 @@
 
   "content_scripts": [
       {
-          "matches": ["https://marketplace.visualstudio.com/*"],
+          "matches": ["https://marketplace.visualstudio.com/items?*"],
           "js": ["content-item.js"]
       }
   ]
