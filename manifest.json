@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+
+  "name": "VSCED",
+  "description": "VSCode Extension Downloader",
+  "version": "0.1",
+
+  "content_scripts": [
+      {
+          "matches": ["https://marketplace.visualstudio.com/*"],
+          "js": ["content-item.js"]
+      }
+  ]
+}
