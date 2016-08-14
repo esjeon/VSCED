@@ -5,13 +5,21 @@
     function addDownloadLink(versionInfo, fileUrl) {
         var link = document.createElement('a');
         var verstr = meta.extensionName + "-" + versionInfo.version;
-        link.href = fileUrl;
         link.innerText = "Download " + verstr;
-        link.download = verstr + ".vsix"
+        link.href = "#";
+        link.onclick = function() {
+            chrome.runtime.sendMessage({
+                fileUrl: fileUrl,
+                fileName: verstr + '.vsix'
+            });
+        }
+
         with(link.style) {
             display = "inline-block";
             borderRadius = "5px";
             border = "4px solid rgb(0, 122, 204)";
+            color = "rgb(0, 122, 204)";
+            textAlign = "center";
             backgorundColor = "white";
             padding = "5px 10px";
             fontWeight = "bolder";

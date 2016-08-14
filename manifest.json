@@ -5,6 +5,14 @@
   "description": "VSCode Extension Downloader",
   "version": "0.1",
 
+  "permissions" : [
+      "downloads"
+  ],
+
+  "background": {
+      "scripts": ["background.js"]
+  },
+
   "content_scripts": [
       {
           "matches": ["https://marketplace.visualstudio.com/items?*"],
