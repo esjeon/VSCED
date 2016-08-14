@@ -1,8 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "VSCED",
-  "description": "VSCode Extension Downloader",
+  "name": "Visual Studio Code Extension Downloader",
+  "short_name": "VSCED",
+  "description": "Provides download links for Visual Studio Code extensions that you're browsing on Visual Studio marketplace.",
   "version": "0.1",
 
   "permissions" : [
